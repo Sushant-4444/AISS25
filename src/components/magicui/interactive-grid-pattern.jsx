@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 /**
  * InteractiveGridPattern - Top section interactive grid with grey transparent strokes, blue fill on hover, and transparent background.
  */
@@ -51,9 +52,9 @@ export function InteractiveGridPattern({
               y={y}
               width={width}
               height={height}
-              className={`transition-all duration-100 ease-in-out ${hoveredSquare === index ? "fill-blue-400/70" : "fill-transparent"} ${squaresClassName}`}
+              className={`transition-all duration-100 ease-in-out ${hoveredSquare === index ? "fill-purple-400/80" : "fill-transparent"} ${squaresClassName}`}
               style={{
-                stroke: "rgba(107, 114, 128, 0.15)",
+                stroke: "rgba(0, 0, 0, 0.02)",
                 strokeWidth: 2,
                 background: "transparent",
                 // fill: "transparent",

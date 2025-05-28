@@ -42,14 +42,14 @@ const NavBar = () => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="md:hidden bg-[#0f202e]/95 px-6 py-4 space-y-4 mt-[8vh]"
+            className="md:hidden bg-white/95 px-6 py-4 space-y-4 mt-[8vh]"
           >
             {navLinks.map(link => (
               <motion.a
                 variants={linkVariants}
                 key={link.name}
                 href={link.href}
-                className="block text-white text-base font-medium hover:text-cyan-300 transition"
+                className="block text-black text-base font-medium hover:text-purple-300 transition"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
@@ -63,7 +63,7 @@ const NavBar = () => {
           {/* Animated Logo */}
           <motion.a
             href="#"
-            className="text-white font-extrabold tracking-widest text-xl uppercase"
+            className="text-black font-extrabold tracking-widest text-xl uppercase"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
@@ -77,7 +77,7 @@ const NavBar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-white text-sm font-medium tracking-wide hover:text-cyan-300 transition duration-200"
+                className="text-black text-sm font-medium tracking-wide hover:text-purple-300 transition duration-200"
               >
                 {link.name}
               </a>
@@ -87,7 +87,7 @@ const NavBar = () => {
           {/* Animated Mobile Menu Button */}
           <motion.button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white"
+            className="md:hidden text-black"
             animate={{ rotate: isOpen ? 90 : 0 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
