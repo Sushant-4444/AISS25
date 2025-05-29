@@ -1,33 +1,81 @@
-import React from 'react';
+import React from "react";
+import { ScratchToReveal } from "./magicui/scratch-to-reveal";
+import { MagicCard } from "./magicui/magic-card";
+import { Lens } from "./magicui/lens";
 
-const About = () => {
-    return (
-       <section id="about" class="bg-white text-black py-20 px-6 md:px-16">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
-    
-    <div class="md:w-1/2 mb-10 md:mb-0">
-      <h1 class="text-4xl md:text-5xl font-bold text-[#F5A800] mb-6">
-        Exploring Generative AI
-      </h1>
-      <p class="text-lg md:text-xl text-[#000000] mb-8">
-        Discover the future of Artificial Intelligence with AISS at IIIT-Delhi. Learn from experts and innovate with cutting-edge tools.
-      </p>
-      <a href="#register" class="inline-block bg-[#9B61F6] hover:bg-[#814ae2] text-white font-semibold px-6 py-3 rounded-2xl transition duration-300">
-        Register Now
-      </a>
-    </div>
+const AboutUs = () => {
+  const viewportWidth = window.innerWidth;
+const viewportHeight = window.innerHeight;
+const card_width = viewportWidth<768 ? viewportWidth * 0.9 : viewportWidth * 0.4;
 
-    <div class="md:w-1/2 flex justify-center">
-      <div class="bg-[#F1F1F1] p-6 rounded-2xl shadow-md text-center">
-        <img src="/path-to-your-qr-code.png" alt="QR Code" class="w-40 h-40 mx-auto mb-4" />
-        <p class="text-black font-medium">Scan to Register</p>
+  return (
+    <section id="about" className="bg-white text-black px-6 py-16 relative">
+      <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-20 pointer-events-none" style={{ backgroundSize: '40px 40px' }}></div>
+
+      <div className="relative z-10 max-w-6xl mx-auto text-center">
+        <h1 className="text-[max(5vw,40px)] font-bold mb-2">
+          <span className="text-[#9B61F6]">About</span> <span className="text-[#F5A800]">AISS</span>
+        </h1>
+        <h2 className="text-black font-light text-xl mb-2">
+          Artificial Intelligence Summer School
+        </h2>
+        <p className="text-black mb-6">The Artificial Intelligence summer school was initiated at the Infosys Center for Artificial Intelligence (CAI) at Indraprastha Institute of Information Technology, Delhi. AISS 2025 is the 4th iteration of the AISS. The new advancements in Artificial Intelligence have the potential to change the way we do things and offer definitive solutions to current problems. We aim to bring the discussion about these new advancements to the forefront.</p>
+        {/* <button className="bg-gradient-to-r from-[#F5A800] to-[#9B61F6] text-white px-6 py-2 rounded-full font-medium">
+          Register Now
+        </button> */}
       </div>
-    </div>
 
-  </div>
-</section>
+      <div className="relative z-10 max-w-6xl mx-auto mt-20 grid md:grid-cols-2 gap-8">
+        <MagicCard className={"p-0"} gradientColor="#D9D9D955">
+        <Lens
+          className="w-full h-full rounded-xl overflow-hidden"
+          >
+        <div className="bg-white/5 p-6 rounded-xl shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1590650046871-92c887180603?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Our Story"
+            className="rounded-lg mb-4"
+          />
+        </div>
+        </Lens>
+        </MagicCard>
 
-    );
+        <div className="flex flex-col gap-6 justify-center">
+          {/* <div className="bg-[#1a1a1a] p-6 rounded-xl shadow-lg"> */}
+            <ScratchToReveal
+      width={card_width}
+      height={140}
+      minScratchPercentage={70}
+      className="flex items-center justify-center overflow-hidden rounded-2xl border-2 bg-gray-100"
+      gradientColors={["#A97CF8", "#F38CB8", "#FDCC92"]}
+    >
+      <div className="flex flex-col items-center justify-center h-full">
+     <h3 className="text-black text-xl font-semibold mb-2">This Year's Theme</h3>
+     <p className="text-black text-sm">
+              Generative AI!
+            </p>
+            </div>
+    </ScratchToReveal>
+
+    <ScratchToReveal
+      width={card_width}
+      height={140}
+      minScratchPercentage={70}
+      className="flex items-center justify-center overflow-hidden rounded-2xl border-2 bg-gray-100"
+      gradientColors={["#A97CF8", "#F38CB8", "#FDCC92"]}
+    >
+      <div className="flex flex-col items-center justify-center h-full">
+     <h3 className="text-black text-xl font-semibold mb-2">Last Year's Theme</h3>
+     <p className="text-black text-sm">
+              LLMs!
+            </p>
+            </div>
+    </ScratchToReveal>
+          {/* </div> */}
+        </div>
+      </div>
+    </section>
+  );
 };
 
-export default About;
+export default AboutUs;

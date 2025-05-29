@@ -1,0 +1,31 @@
+<form
+  action="https://script.google.com/macros/s/AKfycbxaLARg9Ct4kWQ_Pc3-zOpSugbbCWljUDRSintCjQ4lNZZttwgLOkNigqOPCsLixMoeAA/exec"
+  method="POST"
+  target="_blank"
+  style="display: flex; flex-direction: column; gap: 10px; width: 300px"
+>
+  <input type="email" name="email" placeholder="Email" required />
+  <input type="text" name="name" placeholder="Name" required />
+  <input type="text" name="affiliation" placeholder="Affiliation" />
+  <input type="text" name="location" placeholder="Location" />
+  <select name="accommodation">
+    <option value="Yes">Accommodation Needed</option>
+    <option value="No">No Accommodation</option>
+  </select>
+  <input type="text" name="participantCategory" placeholder="Participant Category" />
+  <input type="text" name="participantProgram" placeholder="Participant Program" />
+  <select name="posterPresentation">
+    <option value="Yes">Poster Presentation: Yes</option>
+    <option value="No">No</option>
+  </select>
+  <select name="hackathon">
+    <option value="Yes">Hackathon: Yes</option>
+    <option value="No">No</option>
+  </select>
+  <label>
+    <input type="checkbox" name="cancelAcknowledgement" value="Agreed" required />
+    I will cancel my registration latest by July 15, 2025 if needed
+  </label>
+  <input type="text" name="transactionId" placeholder="Transaction ID" required />
+  <button type="submit">Submit</button>
+</form>

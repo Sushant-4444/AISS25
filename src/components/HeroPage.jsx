@@ -6,7 +6,7 @@ import { ConfettiButton } from "./magicui/confetti";
 const HeroPage = () => {
   return (
     <>
-    <div className="relative h-screen w-100vw overflow-hidden flex items-center justify-center">
+    <div id="home" className="relative h-screen w-100vw overflow-hidden flex items-center justify-center">
       {/* Grid pattern below content */}
       <div className="absolute inset-0 z-20 !bg-transparent">
         <InteractiveGridPattern gridHeight={typeof window !== "undefined" ? window.innerHeight : 800} />
@@ -27,11 +27,11 @@ const HeroPage = () => {
         </p>
         </BlurFade>
       </div>
-    <div className="relative top-40 left-20 transform -translate-x-1/2 z-30">
+    <div className="relative top-40 z-30">
         <BlurFade delay={0.75} inView>
         <a href="#register" className="inline-block mb-4">
         <ConfettiButton
-            className="px-8 py-3 rounded-full bg-gradient-to-r from-yellow-500 via-orange-500 to-purple-500 text-white font-semibold text-lg shadow-lg hover:scale-105 transition-transform duration-200"
+            className="!relative px-8 py-3 rounded-full bg-gradient-to-r from-yellow-500 via-orange-500 to-purple-500 text-white font-semibold text-lg shadow-lg hover:scale-105 transition-transform duration-200"
         >
           Register Now
         </ConfettiButton>
