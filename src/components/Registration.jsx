@@ -3,99 +3,85 @@ import { MagicCard } from './magicui/magic-card';
 
 const scheduleData = [
   {
-    title: 'Day 1 (05/08/24)',
+    title: 'Day 1 (31/07/25)',
     events: [
       {
-        title: 'Registration and Hostel Allotment, College Tour, Interaction',
-        time: '10:00-14:30',
+        title: 'To Be Announced',
+        time: 'To Be Announced',
         speaker: '',
       },
-       {
-        title: 'KeyNoteTalk -1',
-        speaker: 'Dr. Pankaj Jalote: "Getting the most from your 4 years in the Institute"',
-        time: '14:30-16:00',
-      },
-      {
-        title: 'Knowing the Self',
-        speaker: 'by Dr. Anuj Grover',
-        time: '16:00-18:00',
-      },
-      {
-        title: 'Induction Movie & Acoustic Night',
-        time: '19:00-21:00',
-      },
     ],
   },
-  {
-    title: 'Day 2 (06/08/24)',
-    events: [
-      {
-        title: 'Welcome Note',
-        speaker: 'by Director, DoAA, DoSA, DIRD, DOCA, Registrar-IIIT Delhi',
-        time: '10:00-10:45',
-      },
-      {
-        title: 'Gender Sensitization Workshop & ICC',
-        speaker:
-          'Ms. Nidhi Mathur, external member - Gender Sensitization Workshop & ICC in collaboration with ICC Committee',
-        time: '11:00-12:00',
-      },
-      {
-        title: 'Introduction to Library, FMS, IT, Finance, Store, IRD',
-        time: '12:00-13:30',
-      },
-      {
-        title: 'KeyNoteTalk -1',
-        speaker: 'Dr. Pankaj Jalote: "Getting the most from your 4 years in the Institute"',
-        time: '14:30-16:00',
-      },
-      {
-        title: 'Knowing the Self',
-        speaker: 'by Dr. Anuj Grover',
-        time: '16:00-18:00',
-      },
-      {
-        title: 'Induction Movie & Acoustic Night',
-        time: '19:00-21:00',
-      },
-    ],
-  },
-  {
-    title: 'Day 3 (07/08/24)',
-    events: [
-      {
-        title: 'Keynote Speaker Session 1',
-        speaker: 'by Mr. Anshu Gupta (Founder & Director - Goonj)',
-        time: '10:30-11:30',
-      },
-      {
-        title: 'Session for programming & non-programming students under Labs',
-        time: '11:30-13:30',
-      },
-      {
-        title: 'DAC and PLAGIARISM',
-        speaker: 'By Dr. Smriti Singh',
-        time: '14:30-15:30',
-      },
-      {
-        title: 'Introduction to Placements',
-        time: '15:30-16:00',
-      },
-      {
-        title: 'Breaking the ICE',
-        time: '16:00-17:00',
-      },
-      {
-        title: 'Session with the new batch',
-        speaker: 'by Prof. G.S. Visveswaran',
-        time: '17:00-18:00',
-      },
-      {
-        title: 'Movie Night',
-        time: '18:00-21:00',
-      },
-    ],
-  }
+  // {
+  //   title: 'Day 2 (06/08/24)',
+  //   events: [
+  //     {
+  //       title: 'Welcome Note',
+  //       speaker: 'by Director, DoAA, DoSA, DIRD, DOCA, Registrar-IIIT Delhi',
+  //       time: '10:00-10:45',
+  //     },
+  //     {
+  //       title: 'Gender Sensitization Workshop & ICC',
+  //       speaker:
+  //         'Ms. Nidhi Mathur, external member - Gender Sensitization Workshop & ICC in collaboration with ICC Committee',
+  //       time: '11:00-12:00',
+  //     },
+  //     {
+  //       title: 'Introduction to Library, FMS, IT, Finance, Store, IRD',
+  //       time: '12:00-13:30',
+  //     },
+  //     {
+  //       title: 'KeyNoteTalk -1',
+  //       speaker: 'Dr. Pankaj Jalote: "Getting the most from your 4 years in the Institute"',
+  //       time: '14:30-16:00',
+  //     },
+  //     {
+  //       title: 'Knowing the Self',
+  //       speaker: 'by Dr. Anuj Grover',
+  //       time: '16:00-18:00',
+  //     },
+  //     {
+  //       title: 'Induction Movie & Acoustic Night',
+  //       time: '19:00-21:00',
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: 'Day 3 (07/08/24)',
+  //   events: [
+  //     {
+  //       title: 'Keynote Speaker Session 1',
+  //       speaker: 'by Mr. Anshu Gupta (Founder & Director - Goonj)',
+  //       time: '10:30-11:30',
+  //     },
+  //     {
+  //       title: 'Session for programming & non-programming students under Labs',
+  //       time: '11:30-13:30',
+  //     },
+  //     {
+  //       title: 'DAC and PLAGIARISM',
+  //       speaker: 'By Dr. Smriti Singh',
+  //       time: '14:30-15:30',
+  //     },
+  //     {
+  //       title: 'Introduction to Placements',
+  //       time: '15:30-16:00',
+  //     },
+  //     {
+  //       title: 'Breaking the ICE',
+  //       time: '16:00-17:00',
+  //     },
+  //     {
+  //       title: 'Session with the new batch',
+  //       speaker: 'by Prof. G.S. Visveswaran',
+  //       time: '17:00-18:00',
+  //     },
+  //     {
+  //       title: 'Movie Night',
+  //       time: '18:00-21:00',
+  //     },
+  //   ],
+  // }
 ];
 
 const Schedule = () => {

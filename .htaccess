@@ -1,0 +1,18 @@
+# ✅ Enable proper MIME type for JS and CSS
+<IfModule mod_mime.c>
+  AddType application/javascript .js
+  AddType text/css .css
+</IfModule>
+
+# ✅ Let Apache serve existing files normally
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# ❌ Prevent fallback for /assets/* (so JS files aren't routed to index.html)
+RewriteCond %{REQUEST_URI} ^/assets/
+RewriteRule ^ - [L]
+
+# ✅ Fallback everything else to index.html (for SPA routing)
+RewriteRule ^ index.html [QSA,L]

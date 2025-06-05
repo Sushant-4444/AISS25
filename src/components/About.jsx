@@ -32,7 +32,7 @@ const card_width = viewportWidth<768 ? viewportWidth * 0.9 : viewportWidth * 0.4
           >
         <div className="bg-white/5 p-6 rounded-xl shadow-lg">
           <img
-            src="https://images.unsplash.com/photo-1590650046871-92c887180603?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="banner.png"
             alt="Our Story"
             className="rounded-lg mb-4"
           />

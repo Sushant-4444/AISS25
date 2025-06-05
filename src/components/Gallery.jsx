@@ -32,11 +32,11 @@ const ProfileCard = ({ name, role, image, email, github, linkedin }) => {
               <Mail className="w-5 h-5" />
             </Button>
           </a>
-          <a href={github} target="_blank" rel="noopener noreferrer">
+          {/* <a href={github} target="_blank" rel="noopener noreferrer">
             <Button size="icon" variant="ghost" className="hover:text-gray-800">
               <Github className="w-5 h-5" />
             </Button>
-          </a>
+          </a> */}
           <a href={linkedin} target="_blank" rel="noopener noreferrer">
             <Button size="icon" variant="ghost" className="hover:text-blue-500">
               <Linkedin className="w-5 h-5" />

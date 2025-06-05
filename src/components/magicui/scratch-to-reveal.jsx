@@ -1,7 +1,8 @@
-"use client";;
-import { cn } from "@/lib/utils";
-import { motion, useAnimation } from "motion/react";
-import React, { useEffect, useRef, useState } from "react";
+"use client"
+
+import { cn } from "@/lib/utils"
+import { motion, useAnimation } from "motion/react"
+import React, { useEffect, useRef, useState } from "react"
 
 export const ScratchToReveal = ({
   width,
@@ -12,123 +13,133 @@ export const ScratchToReveal = ({
   className,
   gradientColors = ["#A97CF8", "#F38CB8", "#FDCC92"],
 }) => {
-  const canvasRef = useRef(null);
-  const [isScratching, setIsScratching] = useState(false);
-  const [isComplete, setIsComplete] = useState(false);
+  const canvasRef = useRef(null)
+  const [isScratching, setIsScratching] = useState(false)
+  const [isComplete, setIsComplete] = useState(false)
 
-  const controls = useAnimation();
+  const controls = useAnimation()
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas?.getContext("2d");
+    const canvas = canvasRef.current
+    const ctx = canvas?.getContext("2d")
     if (canvas && ctx) {
-      ctx.fillStyle = "#ccc";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-      gradient.addColorStop(0, gradientColors[0]);
-      gradient.addColorStop(0.5, gradientColors[1]);
-      gradient.addColorStop(1, gradientColors[2]);
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "#ccc"
+      ctx.fillRect(0, 0, canvas.width, canvas.height)
+      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height)
+      gradient.addColorStop(0, gradientColors[0])
+      gradient.addColorStop(0.5, gradientColors[1])
+      gradient.addColorStop(1, gradientColors[2])
+      ctx.fillStyle = gradient
+      ctx.fillRect(0, 0, canvas.width, canvas.height)
+
+      // Add text to the gradient background
+      ctx.font = "bold 24px sans-serif"
+      ctx.textAlign = "center"
+      ctx.textBaseline = "middle"
+      ctx.fillStyle = "white"
+      ctx.strokeStyle = "rgba(0, 0, 0, 0.3)"
+      ctx.lineWidth = 2
+      ctx.strokeText("Scratch To Reveal", canvas.width / 2, canvas.height / 2)
+      ctx.fillText("Scratch To Reveal", canvas.width / 2, canvas.height / 2)
     }
-  }, [gradientColors]);
+  }, [gradientColors])
 
   useEffect(() => {
     const handleDocumentMouseMove = (event) => {
-      if (!isScratching) return;
-      scratch(event.clientX, event.clientY);
-    };
+      if (!isScratching) return
+      scratch(event.clientX, event.clientY)
+    }
 
     const handleDocumentTouchMove = (event) => {
-      if (!isScratching) return;
-      const touch = event.touches[0];
-      scratch(touch.clientX, touch.clientY);
-    };
+      if (!isScratching) return
+      const touch = event.touches[0]
+      scratch(touch.clientX, touch.clientY)
+    }
 
     const handleDocumentMouseUp = () => {
-      setIsScratching(false);
-      checkCompletion();
-    };
+      setIsScratching(false)
+      checkCompletion()
+    }
 
     const handleDocumentTouchEnd = () => {
-      setIsScratching(false);
-      checkCompletion();
-    };
+      setIsScratching(false)
+      checkCompletion()
+    }
 
-    document.addEventListener("mousedown", handleDocumentMouseMove);
-    document.addEventListener("mousemove", handleDocumentMouseMove);
-    document.addEventListener("touchstart", handleDocumentTouchMove);
-    document.addEventListener("touchmove", handleDocumentTouchMove);
-    document.addEventListener("mouseup", handleDocumentMouseUp);
-    document.addEventListener("touchend", handleDocumentTouchEnd);
-    document.addEventListener("touchcancel", handleDocumentTouchEnd);
+    document.addEventListener("mousedown", handleDocumentMouseMove)
+    document.addEventListener("mousemove", handleDocumentMouseMove)
+    document.addEventListener("touchstart", handleDocumentTouchMove)
+    document.addEventListener("touchmove", handleDocumentTouchMove)
+    document.addEventListener("mouseup", handleDocumentMouseUp)
+    document.addEventListener("touchend", handleDocumentTouchEnd)
+    document.addEventListener("touchcancel", handleDocumentTouchEnd)
 
     return () => {
-      document.removeEventListener("mousedown", handleDocumentMouseMove);
-      document.removeEventListener("mousemove", handleDocumentMouseMove);
-      document.removeEventListener("touchstart", handleDocumentTouchMove);
-      document.removeEventListener("touchmove", handleDocumentTouchMove);
-      document.removeEventListener("mouseup", handleDocumentMouseUp);
-      document.removeEventListener("touchend", handleDocumentTouchEnd);
-      document.removeEventListener("touchcancel", handleDocumentTouchEnd);
-    };
-  }, [isScratching]);
+      document.removeEventListener("mousedown", handleDocumentMouseMove)
+      document.removeEventListener("mousemove", handleDocumentMouseMove)
+      document.removeEventListener("touchstart", handleDocumentTouchMove)
+      document.removeEventListener("touchmove", handleDocumentTouchMove)
+      document.removeEventListener("mouseup", handleDocumentMouseUp)
+      document.removeEventListener("touchend", handleDocumentTouchEnd)
+      document.removeEventListener("touchcancel", handleDocumentTouchEnd)
+    }
+  }, [isScratching])
 
-  const handleMouseDown = () => setIsScratching(true);
+  const handleMouseDown = () => setIsScratching(true)
 
-  const handleTouchStart = () => setIsScratching(true);
+  const handleTouchStart = () => setIsScratching(true)
 
   const scratch = (clientX, clientY) => {
-    const canvas = canvasRef.current;
-    const ctx = canvas?.getContext("2d");
+    const canvas = canvasRef.current
+    const ctx = canvas?.getContext("2d")
     if (canvas && ctx) {
-      const rect = canvas.getBoundingClientRect();
-      const x = clientX - rect.left + 16;
-      const y = clientY - rect.top + 16;
-      ctx.globalCompositeOperation = "destination-out";
-      ctx.beginPath();
-      ctx.arc(x, y, 30, 0, Math.PI * 2);
-      ctx.fill();
+      const rect = canvas.getBoundingClientRect()
+      const x = clientX - rect.left + 16
+      const y = clientY - rect.top + 16
+      ctx.globalCompositeOperation = "destination-out"
+      ctx.beginPath()
+      ctx.arc(x, y, 30, 0, Math.PI * 2)
+      ctx.fill()
     }
-  };
+  }
 
   const startAnimation = async () => {
     await controls.start({
       scale: [1, 1.5, 1],
       rotate: [0, 10, -10, 10, -10, 0],
       transition: { duration: 0.5 },
-    });
+    })
 
     // Call onComplete after animation finishes
     if (onComplete) {
-      onComplete();
+      onComplete()
     }
-  };
+  }
 
   const checkCompletion = () => {
-    if (isComplete) return;
+    if (isComplete) return
 
-    const canvas = canvasRef.current;
-    const ctx = canvas?.getContext("2d");
+    const canvas = canvasRef.current
+    const ctx = canvas?.getContext("2d")
     if (canvas && ctx) {
-      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-      const pixels = imageData.data;
-      const totalPixels = pixels.length / 4;
-      let clearPixels = 0;
+      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height)
+      const pixels = imageData.data
+      const totalPixels = pixels.length / 4
+      let clearPixels = 0
 
       for (let i = 3; i < pixels.length; i += 4) {
-        if (pixels[i] === 0) clearPixels++;
+        if (pixels[i] === 0) clearPixels++
       }
 
-      const percentage = (clearPixels / totalPixels) * 100;
+      const percentage = (clearPixels / totalPixels) * 100
 
       if (percentage >= minScratchPercentage) {
-        setIsComplete(true);
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        startAnimation();
+        setIsComplete(true)
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+        startAnimation()
       }
     }
-  };
+  }
 
   return (
     <motion.div
@@ -139,15 +150,17 @@ export const ScratchToReveal = ({
         cursor:
           "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KICA8Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNSIgc3R5bGU9ImZpbGw6I2ZmZjtzdHJva2U6IzAwMDtzdHJva2Utd2lkdGg6MXB4OyIgLz4KPC9zdmc+'), auto",
       }}
-      animate={controls}>
+      animate={controls}
+    >
       <canvas
         ref={canvasRef}
         width={width}
         height={height}
         className="absolute left-0 top-0"
         onMouseDown={handleMouseDown}
-        onTouchStart={handleTouchStart}></canvas>
+        onTouchStart={handleTouchStart}
+      ></canvas>
       {children}
     </motion.div>
-  );
-};
+  )
+}

@@ -42,7 +42,7 @@ const NavBar = () => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="md:hidden bg-white/95 px-6 py-4 space-y-4 mt-[8vh]"
+            className="fixed z-50 w-[100vw] md:hidden bg-white/95 px-6 py-4 space-y-4 mt-[8vh]"
           >
             {navLinks.map(link => (
               <motion.a
