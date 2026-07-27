@@ -3,85 +3,125 @@ import { MagicCard } from './magicui/magic-card';
 
 const scheduleData = [
   {
-    title: 'Day 1 (31/07/25)',
+    title: 'Day 1 (06/08/26)',
     events: [
       {
-        title: 'To Be Announced',
-        time: 'To Be Announced',
+        title: 'TBD',
+        time: '09:30 - 11:00',
+        speaker: '',
+      },
+      {
+        title: 'Tea Break',
+        time: '11:00 - 11:30',
+        speaker: '',
+      },
+      {
+        title: 'Hands On Session',
+        speaker: 'Rajesh',
+        time: '11:30 - 13:00',
+      },
+      {
+        title: 'Lunch',
+        time: '13:00 - 14:00',
+        speaker: '',
+      },
+      {
+        title: 'Invited Talk',
+        speaker: 'Saurav',
+        time: '14:00 - 15:30',
+      },
+      {
+        title: 'Mathworks Hands On Session',
+        speaker: '',
+        time: '16:00 - 17:30',
+      },
+      {
+        title: 'Robotics Lab Visit',
+        time: 'After Session',
         speaker: '',
       },
     ],
   },
-  // {
-  //   title: 'Day 2 (06/08/24)',
-  //   events: [
-  //     {
-  //       title: 'Welcome Note',
-  //       speaker: 'by Director, DoAA, DoSA, DIRD, DOCA, Registrar-IIIT Delhi',
-  //       time: '10:00-10:45',
-  //     },
-  //     {
-  //       title: 'Gender Sensitization Workshop & ICC',
-  //       speaker:
-  //         'Ms. Nidhi Mathur, external member - Gender Sensitization Workshop & ICC in collaboration with ICC Committee',
-  //       time: '11:00-12:00',
-  //     },
-  //     {
-  //       title: 'Introduction to Library, FMS, IT, Finance, Store, IRD',
-  //       time: '12:00-13:30',
-  //     },
-  //     {
-  //       title: 'KeyNoteTalk -1',
-  //       speaker: 'Dr. Pankaj Jalote: "Getting the most from your 4 years in the Institute"',
-  //       time: '14:30-16:00',
-  //     },
-  //     {
-  //       title: 'Knowing the Self',
-  //       speaker: 'by Dr. Anuj Grover',
-  //       time: '16:00-18:00',
-  //     },
-  //     {
-  //       title: 'Induction Movie & Acoustic Night',
-  //       time: '19:00-21:00',
-  //     },
-  //   ],
-  // },
-  // {
-  //   title: 'Day 3 (07/08/24)',
-  //   events: [
-  //     {
-  //       title: 'Keynote Speaker Session 1',
-  //       speaker: 'by Mr. Anshu Gupta (Founder & Director - Goonj)',
-  //       time: '10:30-11:30',
-  //     },
-  //     {
-  //       title: 'Session for programming & non-programming students under Labs',
-  //       time: '11:30-13:30',
-  //     },
-  //     {
-  //       title: 'DAC and PLAGIARISM',
-  //       speaker: 'By Dr. Smriti Singh',
-  //       time: '14:30-15:30',
-  //     },
-  //     {
-  //       title: 'Introduction to Placements',
-  //       time: '15:30-16:00',
-  //     },
-  //     {
-  //       title: 'Breaking the ICE',
-  //       time: '16:00-17:00',
-  //     },
-  //     {
-  //       title: 'Session with the new batch',
-  //       speaker: 'by Prof. G.S. Visveswaran',
-  //       time: '17:00-18:00',
-  //     },
-  //     {
-  //       title: 'Movie Night',
-  //       time: '18:00-21:00',
-  //     },
-  //   ],
-  // }
+  {
+    title: 'Day 2 (07/08/26)',
+    events: [
+      {
+        title: 'Invited Talk',
+        speaker: 'Rahul Kala',
+        time: '09:30 - 11:00',
+      },
+      {
+        title: 'Tea Break',
+        time: '11:00 - 11:30',
+        speaker: '',
+      },
+      {
+        title: 'Invited Talk',
+        speaker: 'Pradipto',
+        time: '11:30 - 13:00',
+      },
+      {
+        title: 'Lunch',
+        time: '13:00 - 14:00',
+        speaker: '',
+      },
+      {
+        title: 'Invited Talk',
+        speaker: 'Manohar',
+        time: '14:00 - 15:30',
+      },
+      {
+        title: 'Invited Talk',
+        speaker: 'Sujit',
+        time: '16:00 - 17:30',
+      },
+      {
+        title: 'Dinner',
+        time: '19:00 Onwards',
+        speaker: '',
+      },
+    ],
+  },
+  {
+    title: 'Day 3 (08/08/26)',
+    events: [
+      {
+        title: 'Invited Talk',
+        speaker: 'Vineet',
+        time: '09:30 - 11:00',
+      },
+      {
+        title: 'Tea Break',
+        time: '11:00 - 11:30',
+        speaker: '',
+      },
+      {
+        title: 'Invited Talk',
+        speaker: 'Antony',
+        time: '11:30 - 13:00',
+      },
+      {
+        title: 'Lunch',
+        time: '13:00 - 14:00',
+        speaker: '',
+      },
+      {
+        title: 'TBD',
+        time: '14:00 - 15:30',
+        speaker: '',
+      },
+      {
+        title: 'Invited Talk',
+        speaker: 'Ravi',
+        time: '16:00 - 17:30',
+      },
+      {
+        title: 'TBD',
+        time: 'After Session',
+        speaker: '',
+      },
+    ],
+  },
 ];
 
 const Schedule = () => {
@@ -102,7 +142,7 @@ const Schedule = () => {
     <div id="program" className="min-h-screen bg-white p-6 font-sans">
         <div className="text-center mb-8">
             <h1 className="text-[max(5vw,40px)] font-bold text-[#F5A800]">Program</h1>
-            <p className="text-gray-600">AISS 2025 - Artificial Intelligence Summer School</p>
+            <p className="text-gray-600">AISS 2026 - Artificial Intelligence Summer School</p>
         </div>
       <div className="max-w-4xl mx-auto bg-grey rounded-2xl shadow-lg p-6">
         <div className="flex items-center justify-between mb-4">

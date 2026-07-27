@@ -5,7 +5,7 @@ import { Lens } from "./magicui/lens";
 
 const AboutUs = () => {
   const viewportWidth = window.innerWidth;
-const viewportHeight = window.innerHeight;
+// const viewportHeight = window.innerHeight;
 const card_width = viewportWidth<768 ? viewportWidth * 0.9 : viewportWidth * 0.4;
 
   return (
@@ -19,7 +19,7 @@ const card_width = viewportWidth<768 ? viewportWidth * 0.9 : viewportWidth * 0.4
         <h2 className="text-black font-light text-xl mb-2">
           Artificial Intelligence Summer School
         </h2>
-        <p className="text-black mb-6">The Artificial Intelligence summer school was initiated at the Infosys Center for Artificial Intelligence (CAI) at Indraprastha Institute of Information Technology, Delhi. AISS 2025 is the 4th iteration of the AISS. The new advancements in Artificial Intelligence have the potential to change the way we do things and offer definitive solutions to current problems. We aim to bring the discussion about these new advancements to the forefront.</p>
+        <p className="text-black mb-6">The Artificial Intelligence summer school was initiated at the Infosys Center for Artificial Intelligence (CAI) at Indraprastha Institute of Information Technology, Delhi. AISS 2026 is the 5th iteration of the AISS. The new advancements in Artificial Intelligence have the potential to change the way we do things and offer definitive solutions to current problems. We aim to bring the discussion about these new advancements to the forefront.</p>
         {/* <button className="bg-gradient-to-r from-[#F5A800] to-[#9B61F6] text-white px-6 py-2 rounded-full font-medium">
           Register Now
         </button> */}
@@ -52,12 +52,12 @@ const card_width = viewportWidth<768 ? viewportWidth * 0.9 : viewportWidth * 0.4
       <div className="flex flex-col items-center justify-center h-full">
      <h3 className="text-black text-xl font-semibold mb-2">This Year's Theme</h3>
      <p className="text-black text-sm">
-              Generative AI!
+              Physical AI!
             </p>
             </div>
     </ScratchToReveal>
 
-    <ScratchToReveal
+    {/* <ScratchToReveal
       width={card_width}
       height={140}
       minScratchPercentage={70}
@@ -70,7 +70,7 @@ const card_width = viewportWidth<768 ? viewportWidth * 0.9 : viewportWidth * 0.4
               LLMs!
             </p>
             </div>
-    </ScratchToReveal>
+    </ScratchToReveal> */}
           {/* </div> */}
         </div>
       </div>

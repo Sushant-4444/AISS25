@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import NavBar from './components/Header.jsx'
 import HeroPage from './components/HeroPage.jsx'
 import About from './components/About.jsx'
@@ -8,6 +8,7 @@ import Contact from './components/Events.jsx'
 import Footer from './components/Footer.jsx'
 import CardHolder from './components/CardHolder.jsx'
 import Sponsors from './components/Sponsors.jsx'
+import Speakers from './components/Speakers.jsx'
 
 function App() {
 
@@ -29,21 +30,21 @@ function App() {
     linkedin:"https://www.linkedin.com/in/bapichatterjee/",
   },
   {
-    name: "Dr. Supratim Shit",
-    role: "Hackathon Organizer",
-    image: "https://cai.iiitd.ac.in/upload/usr/original/384744.jpg",
-    email: "supratim@iiitd.ac.in",
+    name: "Dr. Jainendra Shukla",
+    role: "Co-Organizer",
+    image: "https://www.iiitd.ac.in/sites/default/files/Jainendra_01.jpg",
+    email: "jainendra@iiitd.ac.in",
     github: "",
-    linkedin:"https://www.linkedin.com/in/supratim-shit-95189251/",
+    linkedin:"https://in.linkedin.com/in/jainendrashukla",
   },
-   {
-    name: "Dr. Tanmoy Kundu",
-    role: "Hackathon Organizer",
-    image: "https://cai.iiitd.ac.in/upload/usr/original/417515.jpeg",
-    email: "tanmoy.kundu@iiitd.ac.in",
-    github: "",
-    linkedin:"https://www.linkedin.com/in/tanmoy-kundu-a1049113b/",
-  },
+  //  {
+  //   name: "Dr. Tanmoy Kundu",
+  //   role: "Hackathon Organizer",
+  //   image: "https://cai.iiitd.ac.in/upload/usr/original/417515.jpeg",
+  //   email: "tanmoy.kundu@iiitd.ac.in",
+  //   github: "",
+  //   linkedin:"https://www.linkedin.com/in/tanmoy-kundu-a1049113b/",
+  // },
  {
     name: "Ms. Aayushi Shishodia",
     role: "Event Secretary",
@@ -51,14 +52,6 @@ function App() {
     email: "aayushi@iiitd.ac.in",
     github: "",
     linkedin:"https://www.linkedin.com/in/aayushi-shishodia-079491205/",
-  },
-  {
-    name: "CyFuse",
-    role: "Student Club",
-    image: "/CyFuseLogo.png",
-    email: "cyfuse@sc.iiitd.ac.in",
-    github: "",
-    linkedin:"https://www.linkedin.com/company/cyfuse/",
   }
 ];
 
@@ -71,8 +64,7 @@ function App() {
    <Form />
    <Contact />
    <h2 className="text-center text-[max(5vw,40px)] font-bold text-[#F5A800] mb-[4vh]">Speakers</h2>
-   {/* <CardHolder profiles={people} /> */}
-  <p className='text-center'>To BE ANNOUNCED</p>
+  <Speakers />
   <h2 className="text-center text-[max(5vw,40px)] font-bold text-[#F5A800] mb-[4vh] mt-[12vh]">Team</h2>
    <CardHolder profiles={people} />
     {/* <p className='text-center'>To BE ANNOUNCED</p> */}
