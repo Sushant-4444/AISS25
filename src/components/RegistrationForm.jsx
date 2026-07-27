@@ -1,7 +1,7 @@
 import React from "react";
 import { MagicCard } from "./magicui/magic-card";
 
-const Form = () => {
+const RegistrationForm = () => {
   return (
     <section
       id="register"
@@ -38,4 +38,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default RegistrationForm;

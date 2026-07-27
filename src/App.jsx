@@ -1,10 +1,10 @@
 import React from 'react'
-import NavBar from './components/Header.jsx'
+import NavBar from './components/NavBar.jsx'
 import HeroPage from './components/HeroPage.jsx'
 import About from './components/About.jsx'
-import Schedule from './components/Registration.jsx'
-import Form from './components/Contact.jsx'
-import Contact from './components/Events.jsx'
+import Schedule from './components/Schedule.jsx'
+import RegistrationForm from './components/RegistrationForm.jsx'
+import Venue from './components/Venue.jsx'
 import Footer from './components/Footer.jsx'
 import CardHolder from './components/CardHolder.jsx'
 import Sponsors from './components/Sponsors.jsx'
@@ -61,17 +61,14 @@ function App() {
    <HeroPage />
    <About />
    <Schedule />
-   <Form />
-   <Contact />
+   <RegistrationForm />
+   <Venue />
    <h2 className="text-center text-[max(5vw,40px)] font-bold text-[#F5A800] mb-[4vh]">Speakers</h2>
   <Speakers />
   <h2 className="text-center text-[max(5vw,40px)] font-bold text-[#F5A800] mb-[4vh] mt-[12vh]">Team</h2>
    <CardHolder profiles={people} />
     {/* <p className='text-center'>To BE ANNOUNCED</p> */}
    {/* <Sponsors /> */}
-   <h2 className="text-center text-[max(5vw,40px)] font-bold text-[#F5A800] mb-[4vh]">Sponsors</h2>
-   <p className='text-center'>To BE ANNOUNCED</p>
-   <a href="/aiss24" className='text-center block mt-[4vh]'>See our last year Website</a>
    <Footer />
    </>
   )

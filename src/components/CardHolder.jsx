@@ -1,5 +1,5 @@
 import React from "react";
-import ProfileCard from "./Gallery.jsx"; // make sure the path is correct
+import ProfileCard from "./ProfileCard.jsx"; // make sure the path is correct
 
 const CardHolder = ({ profiles }) => {
 return (

@@ -1,7 +1,7 @@
 import React from "react";
 import { MagicCard } from "./magicui/magic-card";
 
-export default function Contact() {
+export default function Venue() {
   return (<>
   <div id="venue" className="py-12 flex flex-col items-center justify-center mt-[5vh]">
     <MagicCard className="p-4 rounded-xl mb-8 flex justify-center items-center" gradientColor="#D9D9D955">
