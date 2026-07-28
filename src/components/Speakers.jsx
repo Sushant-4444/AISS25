@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 const speakers = [
 	{
-		name: 'Rahul Kala',
+		name: 'Dr. Rahul Kala',
 		title: 'Associate Professor',
 		affiliation:
 			'Department of IT, ABV-Indian Institute of Information Technology and Management, Gwalior',
@@ -12,7 +12,7 @@ const speakers = [
 		bio: `Rahul Kala received the B.Tech. and M.Tech. degrees in Information Technology from the Indian Institute of Information Technology and Management, Gwalior, India in 2010. He received his Ph.D. degree in cybernetics from the University of Reading, UK in 2013. He is currently working as an Associate Professor in the Department of IT at the ABV-Indian Institute of Information Technology and Management, Gwalior, India. He is a member of the Center of Autonomous Systems and the Computer Vision and Multimedia Laboratory. He was previously with the Indian Institute of Information Technology, Allahabad from 2013–2023. He is the author of five books and over 150 papers. He has numerous funded projects from Government agencies and industry to his name. He is an active reviewer of leading journals of the domain. He is a recipient of the Early Career Research Grant from the Department of Science and Technology, Government of India. He is a recipient of the Best PhD dissertation award from the IEEE Intelligent Transportation Systems Society; and a scholarship under the Commonwealth Scholarship and Fellowship Program from the UK Government.`,
 	},
 	{
-		name: 'Pradipta Biswas',
+		name: 'Dr. Pradipta Biswas',
 		title: 'Associate Professor',
 		affiliation: 'Indian Institute of Science',
 		note: 'Interaction Design Lab | Visiting Professor, Centre for Brain Research',
@@ -22,13 +22,14 @@ const speakers = [
 		bio: `Pradipta Biswas is an Associate Professor at the Indian Institute of Science. He set up and leads the Interaction Design Lab at IISc. Earlier he worked as a Senior Principal Engineer at Collins Aerospace System, in various leadership positions at the International Telecommunication Union (Telecom branch of UN), Senior Research Associate at the University of Cambridge Engineering Department and Title B1 fellow at the Wolfson College of University of Cambridge. Pradipta is a Gates Cambridge Scholar, undertook PhD in Computer Science from Trinity College, University of Cambridge, UK. His research won various grants and awards from major industries like Intel, British Telecom, Forvia, Collins Aerospace, Siemens, Microsoft Research, Facebook Reality Labs, BEL and so on. He undertook the Voyager Display experiment, which was one of the seven experiments selected during the Axiom 4 mission at the International Space Station. Pradipta is also involved with cockpit design of India's upcoming military aviation platforms.`,
 	},
 	{
-		name: 'Prof. Sujit PB',
+		name: 'Dr. Sujit PB',
 		title: 'Speaker',
 		affiliation: 'Indian Institute of Science Education and Research Bhopal',
 		note: 'sujit@iiserb.ac.in',
+		photo: '/pbsujit.jpg',
 	},
 	{
-		name: 'Sourav Garg',
+		name: 'Dr. Sourav Garg',
 		title: 'Assistant Professor',
 		affiliation: 'Robotics Research Centre, IIIT Hyderabad',
 		note: 'sourav.garg@iiit.ac.in',
@@ -37,14 +38,14 @@ const speakers = [
 		bio: `Dr. Sourav Garg is an Assistant Professor at the Robotics Research Centre, IIIT Hyderabad, where he works at the intersection of robotic vision and machine learning, helping robots see, understand, and act as intelligent embodied agents in the physical world. He completed his PhD at the Queensland University of Technology (QUT), Australia, with an award-winning thesis on visual place recognition based robot localization. Sourav's recent series of work on language-queryable topometric mapping and RGB-only navigation policies have set a new paradigm for physical intelligence based on semantic-geometric spatial understanding. He has been granted 4 US patents through his industrial collaborations. His research is published at various prestigious venues including CoRL, CVPR, ICRA, RA-L, NeurIPS, and ECCV, where he also regularly serves as an Area Chair.`,
 	},
 	{
-		name: 'Manohar Kumar',
+		name: 'Dr. Manohar Kumar',
 		title: 'Assistant Professor',
 		affiliation: 'IIIT Delhi',
 		photo: '/Manohar-Kumar.jpg',
 		bio: `Manohar Kumar has a PhD in Political Theory from LUISS University Rome and has held Postdoctoral positions at IIT Delhi and GREQAM, Aix Marseille University. He is the co-author with Daniele Santoro of Speaking Truth to Power. A Theory of Whistleblowing. He has also edited a book 'Social Scientists in the Civic Space. Ethical Perspectives on Democratic Involvement' (with Arundhati Virmani and Jean Boutier). His works have appeared in Philosophy and Social Criticism, International Journal of Social Robotics, IEEE Transactions on Affective Computing, Critical Criminology, Law and Philosophy, IJCAI, Economic and Political Weekly, and in edited volumes of Routledge. He is currently a Principal Investigator of 'Political Theory of AI'.`,
 	},
 	{
-		name: 'Vineet Vashista',
+		name: 'Dr. Vineet Vashista',
 		title: 'Associate Professor',
 		affiliation: 'Indian Institute of Technology Gandhinagar',
 		note: 'Human-Centered Robotics (HCR) Laboratory',
