@@ -62,9 +62,9 @@ function App() {
    <About />
    <Schedule />
    <RegistrationForm />
-   <Venue />
    <h2 className="text-center text-[max(5vw,40px)] font-bold text-[#F5A800] mb-[4vh]">Speakers</h2>
   <Speakers />
+   <Venue />
   <h2 className="text-center text-[max(5vw,40px)] font-bold text-[#F5A800] mb-[4vh] mt-[12vh]">Team</h2>
    <CardHolder profiles={people} />
     {/* <p className='text-center'>To BE ANNOUNCED</p> */}
